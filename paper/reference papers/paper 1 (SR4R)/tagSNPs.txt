@@ -1,0 +1,1 @@
+longest ROH region indicates slow LD decay rate

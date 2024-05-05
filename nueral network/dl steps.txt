@@ -1,0 +1,6 @@
+* activation function
+* optimizer
+* learning rate ( hyper parameter optimization )
+* number of output layers
+* number of hidden layers
+* regularization ( dropping out the layers) and selecting drop out ratio i.e p-ratio

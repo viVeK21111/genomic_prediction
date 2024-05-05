@@ -1,0 +1,53 @@
+1) hapmap snp
+
+  -> it is used for genotype imputation and high resolutin gwas analysis
+  -> A high-density rice variation map, which identifies one SNP per 20 bases on average, 
+     offers the possibility to generate a high-density HapMap for the rice research community.
+  -> The generated reference HapMap of rice has an average density of one SNP per 200 bp with a heterozygosity rate of
+     1.75% (Figure 2E). Genome-wide distribution statistics showed that 58.34% of the hapmapSNPs are present in the
+     intergenic regions, 12.52% in the intronic regions, 11.79% in the exonic regions, 0.02% on the splicing sites. Also, 10.55%
+     and 6.78% hapmapSNPs are found to be located in the upstream and downstream regions
+
+2) tag snp
+
+  -> High SNP density is beneficial to precise mapping of trait related genes with GWAS analysis, but is not suitable for 
+     population genetic analysis, because SNP redundancy may add unnecessary computational costs and introduce bias to the results
+  -> redundancy in hapmap snp is eliminated.
+  -> Since SNPs within the same LD region possess correlated genotypes forming one haplotype block, a representative SNP is usually 
+     selected as a tag to solve the redundancy issue. We adopted an LD-based SNP pruning procedure to infer haplotype tagging SNPs (tagSNPs) 
+     from the hapmapSNPs (Materials and methods). As a result, 156,502 tagSNPs were identified.
+
+3) fixed snp
+
+-> In the crop breeding industry, genotyping cost per sample is a top-priority factor, since hundreds to thousands of samples are
+   often genotyped in a single day.
+-> by compiling a highly effective marker panel containing only dozens to hundreds of SNPs that are available for high-throughput genotyping plat-
+   forms, such as Douglas ArrayTape and LGC Omega-F equipment, using the KASP genotyping assay.
+-> further compression of the tagSNP panel must consider not only the genetic relationship between subpopulations and accessions, but also the evolu-
+   tionary and/or functional significance of SNPs with high diagnostic effectiveness and stability.
+-> identified the selective sweep regions that are specific to each subpopulation or common to the six subpopulations by ranking within the top 5% of
+   both Fst and hp ratios based on the comparison of the cultivated subpopulations against the wild rice population (Materi-als and methods)
+-> Finally, a total of 1180 SNPs occurring within the genes in the selective sweep
+   regions were selected to generate the fixedSNP panel.
+ 
+4) barcode snp
+
+-> DNA fingerprinting technology using a small set of SNPs to generate a series of genotype combinations, referred to as bar-
+   codes, has become an economical means to protect commercialized varieties.
+-> the barcodeSNP panel must be able to uniquely identify these barcodes to distinguish each of the rice varieties on the market.
+-> we applied the MinimalMarker algorithm on the fixedSNP panel to exhaustively traverse all possible genotype combinations that would distin-
+   guish the 2556 accessions (Materials and methods). The MinimalMarker algorithm generates three sets of minimum marker combinations, 
+   in which each set contains 28 SNPs.After merging the three sets, 38 barcodeSNPs were finally selected to generate the panel
+-> allows users to identify corresponding accessions or varieties when rice varieties are submitted for genotyping with any number of bar-
+   codeSNPs ranging 8–38. The SR4R returns a list of the top 10 best-matched accessions/varieties in the database, and dis-
+   plays associated information including the accession/variety IDs, number of mismatched bases, genomic position of the
+   barcode, genotype heterozygosity, as well as documented subpopulation and origin.
+
+5) barcode indel panel
+
+  -> Indels are another form of genomic variations (usually <50 bp in length) that can be used as molecular markers for a variety of population analysis. 
+     From the 5152 rice accessions, a total of 4,217,174 raw Indels variations were identified using the IC4R variation calling pipeline
+  -> filtering low-quality Indels, 109,898 high-confidence Indels were retained with missing rate <0.01 and MAF 0.05 within the 2556 rice accessions.
+     Among the 109,898 high-confidence Indels, we further identified 62 subpopulation-specific Indels, which can be used as barcodeIndels to 
+     differentiate the six rice subpopulations TeJ, TrJ, Aro, Aus, Ind, and Oru, and the six subgroups of Ind rice S1–S6 (Table S2).
+
