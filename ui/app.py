@@ -16,7 +16,7 @@ from tensorflow.keras.models import load_model
 from joblib import dump,load
 
 
-df=pd.read_csv("G:\My Drive\ps\data\ddata.csv") 
+df=pd.read_csv("\data\ddata.csv") 
 df=df.drop(columns=['Unnamed: 0'])
 x=df.iloc[:,:-2]
 y=df.iloc[:,-2]
@@ -105,12 +105,12 @@ def empty():
 
 @app.route('/download/<path:filename>')
 def download(filename):
-    file="G:\\My Drive\\ps\\ui\\download\\"+filename
+    file="\\download\\"+filename
     return send_file(file,as_attachment=True)
 
 @app.route('/downloadt/<path:filename>')
 def downloadt(filename):
-    file="G:\\My Drive\\ps\\ui\\download\\"+filename
+    file="\\download\\"+filename
     return send_file(file,as_attachment=True) 
 @app.route('/inv')
 def inv():
