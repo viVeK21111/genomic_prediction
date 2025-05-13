@@ -6,7 +6,7 @@ Our analysis utilized GWAS and implemented Machine Learning (ML) and Deep Learni
 we are implementing biological classification and followed by Machine Learning / Deep Learning Techniques. Initially data is prepared and GWAS file is generated. in the second step Phylogenetic tree is constructed using UPGMA , on this Machine learning techniques or Deep Learning Techniques are applied . A comparison of Machine Learning and Deep Learning techniques are illustrated <br>
 
 #### Machine learning models
----------------------------------------------------------------------------------
+
 | Model                          | Test-Size | Test-Accuracy| Precision| Recall |
 |--------------------------------|-----------|--------------|----------|--------|
 | XG-Boost Classifier            | 0.33      | 73.9         | 71.42    | 73.9   |
@@ -15,7 +15,7 @@ we are implementing biological classification and followed by Machine Learning /
 | Random Forest                  | 0.2       | 76.49        | 76.79    | 76.49  |
 | ANN (Artificial Neural Network)| 0.33      | 73           | -        | -      |
 | KNN                            | 0.2       | 74.78        | 76.23    | 74.78  |
----------------------------------------------------------------------------------
+
 #### Deep learning models
 | Model              | MSE    | MAE   |
 |--------------------|--------|-------|
@@ -30,8 +30,10 @@ we are implementing biological classification and followed by Machine Learning /
 we classified O. Sativa samples based on their population type, which played a crucial role in predicting BVs. The findings revealed a substantial improvement in prediction accuracy compared to using entire population samples and other alternative methods. Among the various ML models evaluated, Random Forest (RF) and XGBoost demonstrated the most promising results. <br>
 In summary, genomic data, including genetic markers and genomic selection methods, play a crucial role in predicting phenotypic traits in Oryza sativa.
 
-### Deployment repo
-Repo link: https://github.com/viVeK21111/genomic 
+### SnapShots
+![Home-page](ui/static/home.png) <br>
+![Prediction-page](ui/static/ui.png) <br>
+![Result-page](ui/static/result.png)
 
 ### Research Paper
 Link: https://drive.google.com/file/d/1Jbxd9dEPzeUajNwfLL6g3qwqSPokDWgs/view?usp=sharing
