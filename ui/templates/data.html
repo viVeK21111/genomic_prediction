@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
   <title>Download</title>
@@ -14,7 +16,7 @@
     .fixed-img {
     position: absolute;
     right: 10px; /* Adjust as needed */
-    top: 10px; /* Adjust as needed */
+    top: 5px; /* Adjust as needed */
     z-index: 1000; /* Ensure it stays on top */
     }
     .files {
@@ -51,6 +53,17 @@
             height: 50px;
             border-radius: 5px;
         }
+         .navbar-nav .nav-item {
+            margin-left: 6px; /* Remove margin between nav items */
+        }
+       .navbar-toggler {
+            margin-left: 4px;
+        }
+         .navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
    </style>  
 </head>
 <body>
@@ -74,7 +87,7 @@
                 </li>
             </ul>
         </div>
-        <img class="dimg fixed-img" src="{{url_for('static',filename='dm.png')}}" alt="error loading">
+        <a href="/"><img  class="dimg fixed-img" src="{{url_for('static',filename='dm.png')}}" alt="error loading"></a>
     </nav>
   <h1 class="m-3">Download Files</h1> 
   <div class="files m-3 p-3">

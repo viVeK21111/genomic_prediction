@@ -16,7 +16,7 @@
         .fixed-img {
     position: absolute;
     right: 10px; /* Adjust as needed */
-    top: 10px; /* Adjust as needed */
+    top: 5px; /* Adjust as needed */
     z-index: 1000; /* Ensure it stays on top */
 }
         .navbar .dimg {
@@ -41,6 +41,17 @@
         .intro {
             background-color: rgb(26, 23, 23);
         }
+         .navbar-nav .nav-item {
+            margin-left: 6px; /* Remove margin between nav items */
+        }
+        .navbar-toggler {
+            margin-left: 4px;
+        }
+         .navbar-toggler:focus, 
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
     </style>
 </head>
 <body>
@@ -64,7 +75,7 @@
                 </li>
             </ul>
         </div>
-        <img class="dimg fixed-img" src="{{url_for('static',filename='dm.png')}}" alt="error loading">
+        <a href="/"><img  class="dimg fixed-img" src="{{url_for('static',filename='dm.png')}}" alt="error loading"></a>
     </nav>
     <!--
     <div class="index">

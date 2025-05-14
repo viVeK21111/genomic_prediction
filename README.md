@@ -2,10 +2,11 @@
 Accurately predicting plan height is a challenge but is vital for optimizing crop management, maximizing yield, improving disease resistance, enhancing environmental adaptation, ensuring efficient harvesting and streamlining breeding programs.<br>
 Our analysis utilized GWAS and implemented Machine Learning (ML) and Deep Learning (DL) Models. We achieved more than 75% accuracy in classifying rice subpopulation and an accuracy range of 0.64 to 0.76 for predicting rice plant height based on genotype information. Using these models will enhance productivity and sustainability of agriculture
 
-### Process 
-we are implementing biological classification and followed by Machine Learning / Deep Learning Techniques. Initially data is prepared and GWAS file is generated. in the second step Phylogenetic tree is constructed using UPGMA , on this Machine learning techniques or Deep Learning Techniques are applied . A comparison of Machine Learning and Deep Learning techniques are illustrated <br>
+### Stage I
+we are implementing biological classification and followed by Machine Learning / Deep Learning Techniques. Initially data is prepared and GWAS file is generated. in the second step Phylogenetic tree is constructed using UPGMA , Then clusters were extracted and labeled These clusters correspond to the different rice subpopulations (Indica, Aus, Aromatic, Temperate japonica, Tropical japonica, etc.).The original dataset was reorganized based on the extracted clusters. This biological clustering provided a natural way to classify the rice samples before applying computational methods. <br>
+Then Machine learning techniques and Deep Learning Techniques are applied. we attempted to classify rice samples into different subpopulations (Indica, Aus, Aromatic, Temperate japonica, Tropical japonica) based on genetic information.Encoded DNA sequences (A, T, C, G) with numerical values (A:1.5, T:2.5, C:0.5, G:0.75).Addressed class imbalance using SMOTE. Then the data is fed into various models.<br> A comparison of various Machine Learning and Deep Learning techniques are illustrated below.
 
-#### Machine learning models
+#### Models for subpopulation classification
 
 | Model                          | Test-Size | Test-Accuracy| Precision| Recall |
 |--------------------------------|-----------|--------------|----------|--------|
@@ -16,7 +17,12 @@ we are implementing biological classification and followed by Machine Learning /
 | ANN (Artificial Neural Network)| 0.33      | 73           | -        | -      |
 | KNN                            | 0.2       | 74.78        | 76.23    | 74.78  |
 
-#### Deep learning models
+### Stage II
+
+After classification of subpopulation, based on the encoded genomic data and classified subpopulation (lable encoded) the height is predicted using various regression models illustrated below.
+
+#### Models for height prediction
+
 | Model              | MSE    | MAE   |
 |--------------------|--------|-------|
 | Linear Regression  | 364.7  | 14.73 |

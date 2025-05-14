@@ -62,7 +62,12 @@ def download(filename):
 
 @app.route('/inv')
 def inv():
-    return "<h2>Invalid input</h2>"
+    return render_template('invalid.html')
+
+@app.route('/google61de0346afbe6e16.html')
+def google_verify():
+    return send_from_directory('static', 'google61de0346afbe6e16.html')
+
 
 @app.route('/submit',methods=['POST','GET'])
 def submit():
